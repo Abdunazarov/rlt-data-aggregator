@@ -14,5 +14,6 @@ def initialize_db():
     else:
         print("DB is already initialized")
 
+
 if __name__ == "__main__":
     initialize_db()

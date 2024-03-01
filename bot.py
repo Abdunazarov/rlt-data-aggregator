@@ -28,10 +28,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         )
         response_message = json.dumps(result, ensure_ascii=False, indent=2)
         await update.message.reply_text(response_message)
-        
+
     except json.decoder.JSONDecodeError:
         await update.message.reply_text("Данные должны быть в формате JSON")
-        
+
     except Exception as e:
         print(f"Ошибка: {e}")
 
